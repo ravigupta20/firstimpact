@@ -5,16 +5,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { ApiboxComponent } from './apibox/apibox.component';
+import { FormsModule } from '@angular/forms';
+
+import { ProductpageComponent } from './productpage/productpage.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    ApiboxComponent
+    ApiboxComponent,
+    ProductpageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

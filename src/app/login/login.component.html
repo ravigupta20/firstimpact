@@ -1,1 +1,20 @@
-<div><button class="btn btn-danger">Ravi</button></div>
+<form #validateDeatils="ngForm" (ngSubmit) = "validateForm(validateDeatils)" >
+    <h1 [ngClass]="{'successMsgs': msgs[0]?.summary == 'User logged in Successfully!', 'errorMsgs': msgs[0]?.summary == 'Incorrect user ID or Password' || msgs[0]?.summary == 'Input User ID and Password' }">{{msgs[0]?.summary}}</h1>
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="userID" #userID="ngModel" ngModel required>
+  
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password" #password="ngModel" ngModel required>
+  
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" name="remember"> Remember me
+      </label>
+    </div>
+  
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
